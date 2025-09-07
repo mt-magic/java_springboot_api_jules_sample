@@ -1,34 +1,37 @@
-# Spring Boot + Vue.js User List Application
+# Spring Boot + Vue.js ユーザー一覧表示アプリケーション
 
-This project is a simple full-stack application that includes a Spring Boot backend API and a Vue.js frontend.
+このプロジェクトは、Spring BootバックエンドAPIとVue.jsフロントエンドで構成される、シンプルなフルスタックアプリケーションです。
 
-- **Backend**: A Java Spring Boot application that provides a REST API endpoint at `/api/users`.
-- **Frontend**: A Vue.js application that fetches user data from the backend and displays it in a table.
-- **Development Environment**: A pre-configured Dev Container is available for a consistent development experience using VS Code.
+- **バックエンド**: `/api/users` のREST APIエンドポイントを提供するJava Spring Bootアプリケーションです。
+- **フロントエンド**: バックエンドからユーザーデータを取得し、テーブル形式で表示するVue.jsアプリケーションです。
+- **開発環境**: VS Codeを使用し、一貫した開発体験を得るための設定済みDev Containerが利用可能です。
 
-## Running the Application
+## アプリケーションの実行方法
 
-It is recommended to use the provided Dev Container to run this project.
+このプロジェクトの実行には、提供されているDev Containerの使用を推奨します。
 
-1.  **Open in Dev Container**:
-    *   Open this project in Visual Studio Code.
-    *   When prompted, click on **"Reopen in Container"**. This will build and start the development environment which includes Java, Maven, and Node.js.
+### 1. Dev Containerで開く
+- このプロジェクトをVisual Studio Codeで開きます。
+- 右下に表示される「Reopen in Container」のプロンプトをクリックします。これにより、Java、Maven、Node.jsを含む開発環境が構築・起動されます。
 
-2.  **Start the Backend (Spring Boot)**:
-    *   Open a new terminal in VS Code (`Ctrl+` or `Terminal > New Terminal`).
-    *   Run the following commands to start the Spring Boot application:
-        ```bash
-        cd demo
-        mvn spring-boot:run
-        ```
-    *   The backend API will be available at `http://localhost:8080/api/users`.
+### 2. バックエンド (Spring Boot) の起動
+- VS Codeで新しいターミナルを開きます (`Ctrl+`` ` または `ターミナル > 新しいターミナル`)。
+- 以下のコマンドを実行して、Spring Bootアプリケーションを起動します。
+  ```bash
+  cd demo
+  mvn spring-boot:run
+  ```
+- バックエンドAPIは `http://localhost:8080/api/users` で利用可能になります。
 
-3.  **Start the Frontend (Vue.js)**:
-    *   Open a second terminal in VS Code.
-    *   Run the following commands to install dependencies and start the Vue.js development server:
-        ```bash
-        cd frontend
-        npm install
-        npm run dev
-        ```
-    *   The frontend application will be accessible at `http://localhost:5173`. Open this URL in your browser to see the user list.
+### 3. フロントエンド (Vue.js) の起動
+- VS Codeで2つ目の新しいターミナルを開きます。
+- 以下のコマンドを実行して、依存関係をインストールし、Vue.js開発サーバーを起動します。
+  ```bash
+  cd frontend
+  npm install
+  npm run dev
+  ```
+
+### 4. ユーザー一覧の表示
+- フロントエンドアプリケーションには、以下のURLからアクセスできます。ブラウザで開き、ユーザー一覧を確認してください。
+- **ユーザー一覧表示URL**: [http://localhost:5173](http://localhost:5173)
