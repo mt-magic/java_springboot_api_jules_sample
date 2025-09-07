@@ -1,21 +1,25 @@
 {
-	"name": "Java & Spring Boot",
+	"name": "Java & Vue & Spring Boot",
 	"image": "mcr.microsoft.com/devcontainers/java:0-17",
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "17",
 			"installMaven": "true"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
 		}
 	},
-	"forwardPorts": [8080],
+	"forwardPorts": [8080, 5173],
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"vscjava.vscode-java-pack",
-				"vmware.vscode-spring-boot"
+				"vmware.vscode-spring-boot",
+				"Vue.volar"
 			]
 		}
 	},
-	"postCreateCommand": "cd demo && mvn spring-boot:run",
+	"postCreateCommand": "cd demo && mvn package",
 	"remoteUser": "vscode"
 }
