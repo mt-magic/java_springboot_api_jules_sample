@@ -1,0 +1,21 @@
+{
+	"name": "Java & Spring Boot",
+	"image": "mcr.microsoft.com/devcontainers/java:0-17",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "17",
+			"installMaven": "true"
+		}
+	},
+	"forwardPorts": [8080],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"vmware.vscode-spring-boot"
+			]
+		}
+	},
+	"postCreateCommand": "cd demo && mvn spring-boot:run",
+	"remoteUser": "vscode"
+}
